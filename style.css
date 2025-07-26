@@ -1,0 +1,108 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    background-image: radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0);
+    background-size: 40px 40px;
+}
+.section-wrapper {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+.card {
+    background-color: rgba(17, 24, 39, 0.5);
+    border-radius: 2rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(45, 212, 191, 0.3), 0 4px 6px -2px rgba(0,0,0,0.05);
+    transform: scale(1.04);
+}
+.tag {
+    display: inline-block;
+    background-color: rgba(55, 65, 81, 0.5);
+    color: #5eead4;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    transition: all 0.2s;
+    transform: none;
+}
+.tag:hover {
+    background-color: rgba(45, 212, 191, 0.2);
+    color: #99f6e4;
+    transform: scale(1.1);
+}
+.ai-button {
+    background-color: #14b8a6;
+    color: #fff;
+    font-weight: 600;
+    padding: 0.75rem 1.25rem;
+    border-radius: 9999px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(45, 212, 191, 0.4), 0 4px 6px -2px rgba(0,0,0,0.05);
+    transform: none;
+}
+.ai-button:hover {
+    background-color: #2dd4bf;
+    box-shadow: 0 10px 15px -3px rgba(45, 212, 191, 0.4), 0 4px 6px -2px rgba(0,0,0,0.05);
+    transform: scale(1.05);
+}
+.ai-button:disabled {
+    background-color: #4b5563;
+    cursor: not-allowed;
+}
+.loader {
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top: 4px solid #2dd4bf; /* teal-400 */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Apple-like word transition */
+.apple-effect-title .letter {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.apple-effect-title.is-visible .letter {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Subtle pulse for hero social icons */
+.social-icon i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.social-icon:hover i {
+    transform: scale(1.2) rotate(5deg);
+    color: #2dd4bf; /* teal-400 */
+}
